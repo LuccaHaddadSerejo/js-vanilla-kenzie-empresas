@@ -26,9 +26,9 @@
  font-size: var(--font-size-6);
 }
 
-.main{
+/* .main{
 
-}
+} */
 
 .section-1{
     gap: 10px;
@@ -63,12 +63,6 @@
 /* 
 .section-1_div-3{
 } */
-
-.section-1_btn{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
 
 /* .img_pen{
 } */
