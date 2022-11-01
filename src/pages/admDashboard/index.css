@@ -1,7 +1,7 @@
 .border_full{
     box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.1);
     background-color: var(--gray1000);
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
 
 .header{
@@ -26,6 +26,110 @@
  font-size: var(--font-size-6);
 }
 
+/* .main{
+
+}
+
+.section-1{
+
+} */
+
+.section-1_div-1{
+    margin-bottom: 10px;
+}
+
+.section-1_div-1_title{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    color: var(--gray100);
+}
+
+.section-1_select{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-5);
+    color: var(--gray100);
+    border: 1px solid var(--gray100);
+    border-radius: 14px;
+    height: 30px;
+    width: 282px;
+    text-align: center;
+    position: relative;
+    left: 100px;
+}
+
+/* .section-1_options{
+} */
+
+.plus_img{
+    position: relative;
+    left: 280px;
+}
+
+.list_full{
+    width: 100%;
+    background-color: rgba(248, 248, 248, 1);
+    padding: 34px 56px;
+    overflow-x: auto;
+    gap: 100px;
+    margin-bottom: 50px;
+    max-height: 320px;
+}
+
+.list_item{
+    border-bottom: solid 1px var(--brand100);
+    width: 45%;
+    background-color: var(--gray1000);
+    padding: 15px 25px;
+    margin-bottom: -60px;
+}
+
+.list_div-1{
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.item_title{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-5);
+    color: var(--gray100);
+}
+
+.item_description{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-6);
+    color: var(--gray100);
+}
+
+.item_company{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-6);
+    color: var(--gray100);
+}
+
+.list_div-2{
+    gap:10px;
+}
+
+/* .section-2{
+
+} */
+
+.section-2_div-1{
+    margin-bottom: 10px;
+}
+
+.section-2_div-1_title{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    color: var(--gray100);
+}
+
+.list_button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
 @media (min-width: 900px) {
     .container {
         width: 90%;
@@ -47,6 +151,11 @@
     }
 
     .dropdown_btn-1{
+        width: 150px;
+        height: 45px;
+    }
+
+    .dropdown_btn-2{
         width: 150px;
         height: 45px;
     }
