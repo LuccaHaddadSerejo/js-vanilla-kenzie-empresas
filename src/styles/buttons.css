@@ -34,6 +34,7 @@
     font-weight: var(--font-weight-2);
     font-size: var(--font-size-6);
     border: 1px solid var(--brand100);
+    cursor: pointer;
 }
 
 .form_login_btn{
@@ -44,4 +45,5 @@
     font-weight: var(--font-weight-2);
     font-size: var(--font-size-6);
     border: none;
+    cursor: pointer;
 }
