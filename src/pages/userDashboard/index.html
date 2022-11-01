@@ -24,24 +24,30 @@
             </div>
         </header>
     </div> 
-    <main class="main">
-        <section class="section-1">
-            <h2 class="section-1_title">USERNAME</h2>
-            <div class="section-1_div">
-                <span class="section-1_span">Email: meuemail@mail.com</span>
-                <span class="section-1_span">Pleno</span>
-                <span class="section-1_span">Home Office</span>
+    <main class="main container">
+        <section class="section-1 flex_row justify_between align_center"> 
+            <div class="section-1_div flex_col">
+                <h2 class="section-1_title">USERNAME</h2>
+                <div class="section-1_div-2 flex_row align_center justify_around">
+                    <span class="section-1_span">Email: meuemail@mail.com</span>
+                    <span class="section-1_span">Pleno</span>
+                    <span class="section-1_span">Home Office</span>
+                </div>
             </div>
-            <button class="section-1_btn"><img src="../../assets/img/penBlue.svg" alt=""></button>
+            <div class="section-1_div-3"> 
+                <button class="section-1_btn"><img class="img_pen" src="../../assets/img/penBlue.svg" alt=""></button>
+            </div>
         </section>
         <section class="section-2">
-            <div class="empty_list">
+            <!-- <div class="empty_list flex_row align_center justify_center">
                 <span class="empty_list_span">Você ainda não foi contratado</span>
-            </div>
+            </div> -->
             <div class="populated_list">
-                <h2 class="populated_list_title">Company Name - Department Name</h2>
-                <ul class="full_list">
-                    <li class="list_item">
+                <div class="populated_list_div flex_row align_center justify_center">
+                    <h2 class="populated_list_title">Company Name - Department Name</h2>
+                </div>
+                <ul class="full_list flex_row flex_wrap justify_evenly">
+                    <li class="list_item flex_col">
                         <span class="list_item_span-1">Nome do colega</span>
                         <span class="list_item_span-2">Sênior</span>
                     </li>
