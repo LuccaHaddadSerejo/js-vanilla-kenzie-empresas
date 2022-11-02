@@ -20,9 +20,9 @@ const createToast = (title, text) => {
     }else if(title == 'Sua conta foi criada com sucesso!'){
         toastTitle.classList = 'toast_message_success'
         toastWrapper.classList = 'toast_wrapper background_sucess animation-1'
-    }else if(title == 'Usuário ou senha incorretos'){
+    }else if(title == 'Usuário ou senha incorretos!'){
         toastTitle.classList = 'toast_message_error'
-        toastWrapper.classList = 'toast_wrapper animation-1'
+        toastWrapper.classList = 'toast_wrapper background_error animation-1'
     }
 
     toastDivTwo.append(toastTitle)

@@ -72,6 +72,16 @@
     align-self: center;
 }
 
+.dropdown_full{
+    position: absolute;
+    top: 82px;
+    margin-top: -22px;
+    background-color: var(--gray1000);
+    height: 82px;
+    width: 100%;
+    gap: 12px;
+}
+
 @media (min-width: 900px) {
     .container {
         width: 90%;
@@ -109,6 +119,10 @@
     .dropdown_btn-2{
         width: 150px;
         height: 45px;
+    }
+
+    .dropdown_full{
+        display: none;
     }
 }
 
