@@ -1,0 +1,30 @@
+.modal_wrapper{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(70, 35, 167, 0.13);
+}
+
+.modal_edit_container{
+    position: relative;
+    height: 421px;
+    width: 506px;
+    padding: 30px;
+    background-color: var(--gray1000);
+}
+
+.modal_edit_user_div-1{
+    gap: 20px;
+}
+
+.modal_edit_title{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-2);
+}
+
+.modal_edit_form{
+    gap: 20px;
+}
+

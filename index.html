@@ -13,6 +13,10 @@
 </head>
 <body class="body">
     <div class="border_full">
+        <div class="hidden dropdown_full flex_row align_center justify_center">
+            <button id="dropDownRedirectLogin" class="dropdown_btn-1">Login</button>
+            <button id="dropDownRedirectRegister" class="dropdown_btn-2">Cadastro</button>
+        </div>
         <header class="header container flex_row justify_between align_center">
             <div class="header_div-1 flex_row align_center">
                 <div class="header_img"></div>
@@ -21,8 +25,8 @@
             <div class="header_div-2">
                 <button class="header_mobile_btn"><img src="./src/assets/img/Vector.svg" alt=""></button>
                 <div class="flex_row header_div_desktop">
-                    <button class="dropdown_btn-1">Login</button>
-                    <button class="dropdown_btn-2">Cadastro</button>
+                    <button id="redirectLogin" class="dropdown_btn-1">Login</button>
+                    <button id="redirectRegister" class="dropdown_btn-2">Cadastro</button>
                 </div>
             </div>
         </header>
@@ -33,30 +37,17 @@
                 <img class="homepage_img" src="./src/assets/img/homepagedesktop.svg" alt="">
             </div>
         </section>
-        <section class="section_two container">
-            <!-- <div class="dropdown_full flex_row align_center justify_center">
-                <button class="dropdown_btn-1">Login</button>
-                <button class="dropdown_btn-2">Cadastro</button>
-            </div> -->
-            <select class="select_full" name="" id="">
+        <section class="section_two section_two_desktop">
+            <select id="select_home" class="select_full" name="">
                 <option hidden class="options" value="">Selecionar Setor</option>
-                <option class="options" value="">Teste</option>
-                <option class="options" value="">Teste</option>
-                <option class="options" value="">Teste</option>
-                <option class="options" value="">Teste</option>
+                <option class="options" value="">Selecionar todas</option>
             </select>
             <div class="div_ul">
-                <ul class="list_full flex_row">
-                    <li class="list_item flex_col justify_between">
-                        <h2 class="item_title">Empresa Name</h2>
-                        <div class="item_div flex_col">
-                            <span class="item_hour">10 horas</span>
-                            <span class="item_sector">Setor</span>
-                        </div>
-                    </li>
+                <ul id="list_home" class="list_full flex_row">
                 </ul>
             </div>
         </section> 
     </main>
+    <script type="module" src="./src/pages/homepage/index.js"></script>
 </body>
 </html>
