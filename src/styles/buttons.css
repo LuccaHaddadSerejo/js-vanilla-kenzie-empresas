@@ -67,3 +67,12 @@
 .modal_edit_confirm_button{
     min-width: 100%;
 }
+
+.modal_close-btn{
+    width: 38px;
+    height: 32px;
+    padding: 4px 14px;
+    color: var(--gray400);
+    border: none;
+    cursor: pointer;
+}

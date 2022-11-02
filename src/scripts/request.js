@@ -1,3 +1,5 @@
+import { createToast } from "./toast.js"
+
 const baseUrl = "http://localhost:6278"
 
 async function requestSectors(){
@@ -45,9 +47,32 @@ async function requestCompaniesBySector(sector){
     }
 }
 
+async function createNewUser(body){
+    try{
+        const data = await fetch(`${baseUrl}/auth/register`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body)
+        })
+        if(data.ok == true){
+            createToast('Sua conta foi criada com sucesso!', 'Você será redirecionado para a página de login')
+            setTimeout(() => {  
+                window.location.replace('/src/pages/login/index.html')
+            }, 4000);   
+        }else{
+            createToast('O email já foi registrado!', 'Tente novamente com outro e-mail')
+        }
+    }catch(error){
+        console.log(error)
+    }
+}
+
 
 export {
     requestSectors,
     requestCompanies,
     requestCompaniesBySector,
+    createNewUser,
 }
