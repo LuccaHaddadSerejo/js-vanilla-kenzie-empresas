@@ -53,3 +53,17 @@
     background-color: transparent;
     cursor: pointer;
 }
+
+.modal_close_btn{
+    position: absolute;
+    left: 465px;
+    top: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.modal_edit_confirm_button{
+    min-width: 100%;
+}
