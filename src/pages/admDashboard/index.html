@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie empresas - AdminDashboard</title>
+    <link rel="stylesheet" href="../../styles/texts.css">
+    <link rel="stylesheet" href="../../styles/inputs.css">
+    <link rel="stylesheet" href="../../styles/displays.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="body">
+    <div class="border_full">
+        <header class="header container flex_row justify_between align_center">
+            <div class="header_div-1 flex_row align_center">
+                <div class="header_img"></div>
+                <h2 class="header_title">Kenzie Empresas</h2>
+            </div>
+            <div class="header_div-2">
+                    <button class="dropdown_btn-1">Logout</button>
+            </div>
+        </header>
+    </div> 
+    <main class="main container">
+        <section class="section-1 flex_col">
+            <div class="section-1_div-1 flex_row justify_between">
+                <h2 class="section-1_div-1_title">Departamentos</h2>
+                <select class="section-1_select" name="" id="">
+                    <option class="section-1_options" hidden value="">Selectionar Empresa</option>
+                    <option class="section-1_options" value="">Teste</option>
+                    <option class="section-1_options" value="">Teste</option>
+                    <option class="section-1_options" value="">Teste</option>
+                </select>
+                <img class="plus_img" src="../../assets/img/plusWhite.svg" alt="">
+                <button class="section-1_div-1_button">Criar</button>
+            </div>
+            <ul class="list_full flex_row">
+                <li class="list_item flex_col">
+                    <div class="list_div-1 flex_col">
+                        <h2 class="item_title">Department Name</h2>
+                        <span class="item_description">Department description</span>
+                        <span class="item_company">Company Name</span>
+                    </div>
+                    <div class="list_div-2 flex_row">
+                        <button class="list_button"><img class="eye_img" src="../../assets/img/eyeBlue.svg" alt=""></button>
+                        <button class="list_button"><img class="pen_img" src="../../assets/img/penBlack.svg" alt=""></button>
+                        <button class="list_button"><img class="trash_img" src="../../assets/img/trashBlack.svg" alt=""></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="section-2">
+            <div class="section-2_div-1">
+                <h2 class="section-2_div-1_title">Usuários cadastrados</h2>
+            </div>
+            <ul class="list_full flex_row">
+                <li class="list_item flex_col justify_between">
+                    <div class="list_div-1 flex_col">
+                        <h2 class="item_title">Username</h2>
+                        <span class="item_description">Pleno</span>
+                        <span class="item_company">Company Name</span>
+                    </div>
+                    <div class="list_div-2 flex_row">
+                        <button class="list_button"><img class="pen_img" src="../../assets/img/penBlack.svg" alt=""></button>
+                        <button class="list_button"><img class="trash_img" src="../../assets/img/trashBlack.svg" alt=""></button>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </main>       
+</body>

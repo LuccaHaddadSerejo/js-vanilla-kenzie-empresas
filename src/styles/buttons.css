@@ -47,3 +47,9 @@
     border: none;
     cursor: pointer;
 }
+
+.section-1_user_btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
