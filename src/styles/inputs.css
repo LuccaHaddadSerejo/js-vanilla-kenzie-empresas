@@ -1,0 +1,13 @@
+.input_login{   
+    text-indent: 20px;
+    width: 100%;
+    height: 52px;
+    background-color: var(--gray1000);
+    border: 1px solid rgba(0, 0, 0, 0.2);;
+}
+
+.input_login::placeholder{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-6);
+    color: rgba(0, 0, 0, 0.5);
+}

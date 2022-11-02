@@ -23,7 +23,7 @@
     --alert100: #CE4646;
     --sucess100: #4BA036;
 
-    --font-size-1: 42px
+    --font-size-1: 42px;
     --font-size-2: 40px;
     --font-size-3: 30px;
     --font-size-4: 22px;
@@ -31,6 +31,7 @@
     --font-size-6: 18px;
     --font-size-7: 17px;
     --font-size-8: 16px;
+    --font-size-9: 32px;
     
     --font-weight-1: 700;
     --font-weight-2: 400;
