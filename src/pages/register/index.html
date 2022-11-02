@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenzie empresas - Register</title>
-    <link rel="stylesheet" href="../../styles/texts.css">
+    <link rel="stylesheet" href="../../styles/toast.css">
     <link rel="stylesheet" href="../../styles/inputs.css">
     <link rel="stylesheet" href="../../styles/displays.css">
     <link rel="stylesheet" href="../../styles/buttons.css">
@@ -22,8 +22,8 @@
             <div class="header_div-2">
                 <button class="header_mobile_btn"><img src="../../assets/img/Vector.svg" alt=""></button>
                 <div class="flex_row header_div_desktop">
-                    <button class="dropdown_btn-1">Login</button>
-                    <button class="dropdown_btn-2">Cadastro</button>
+                    <button id="redirectLoginBtn" class="dropdown_btn-1">Login</button>
+                    <button id="redirectHomeBtn" class="dropdown_btn-2">Home</button>
                 </div>
             </div>
         </header>
@@ -34,18 +34,15 @@
                 <h2 class="main_title">Cadastre-se</h2>
             </div>
             <form class="register_form flex_col">
-                <label hidden for="nome"></label>
-                <input class="input_login" placeholder="Seu nome" type="email" name="nome">
-                <label hidden for="email"></label>
-                <input class="input_login" placeholder="Seu e-mail" type="email" name="email">
-                <label hidden for="password"></label>
-                <input class="input_login" placeholder="Sua senha" type="password" name="password">
-                <select class="form_select" name="" id="">
+                <input class="input_login" placeholder="Seu nome" type="text" id="username">             
+                <input class="input_login" placeholder="Sua senha" type="password" id="password">
+                <input class="input_login" placeholder="Seu e-mail" type="email" id="email">
+                <select id="professional_level" class="form_select">
                     <option hidden class="options" value="">Nível profissional</option>
-                    <option class="options" value="">Estágio</option>
-                    <option class="options" value="">Júnior</option>
-                    <option class="options" value="">Pleno</option>
-                    <option class="options" value="">Sênior</option>
+                    <option  class="options" value="estágio">Estágio</option>
+                    <option  class="options" value="júnior">Júnior</option>
+                    <option  class="options" value="pleno">Pleno</option>
+                    <option  class="options" value="sênior">Sênior</option>
                 </select>
                 <button class="form_login_btn" type="submit">Cadastre-se</button>
             </form>
@@ -54,5 +51,6 @@
             </div>
         </section>
     </main>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>
