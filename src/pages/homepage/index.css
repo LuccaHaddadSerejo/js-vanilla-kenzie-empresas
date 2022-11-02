@@ -53,18 +53,6 @@
     gap: 12px;
 }
 
-.select_full{
-    width: 100%;
-    border: none;
-    height: 52px;
-    text-align: center;
-    background-color: var(--brand100);
-    color: var(--gray1000);
-    font-weight: var(--font-weight-2);
-    font-size: var(--font-size-6);
-    cursor: pointer;
-}
-
 /* .options{
 }
 
