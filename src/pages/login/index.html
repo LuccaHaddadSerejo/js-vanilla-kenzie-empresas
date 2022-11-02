@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kenzie empresas-Login</title>
-    <link rel="stylesheet" href="../../styles/texts.css">
+    <title>Kenzie empresas - Login</title>
+    <link rel="stylesheet" href="../../styles/toast.css">
     <link rel="stylesheet" href="../../styles/inputs.css">
     <link rel="stylesheet" href="../../styles/displays.css">
     <link rel="stylesheet" href="../../styles/buttons.css">
@@ -14,6 +14,10 @@
 </head>
 <body class="body">
     <div class="border_full">
+        <div class="hidden dropdown_full flex_row align_center justify_center">
+            <button id="dropDownRedirectHome" class="dropdown_btn-1">Home</button>
+            <button id="dropDownRedirectRegister" class="dropdown_btn-2">Cadastro</button>
+        </div>
         <header class="header container flex_row justify_between align_center">
             <div class="header_div-1 flex_row align_center">
                 <div class="header_img"></div>
@@ -22,8 +26,9 @@
             <div class="header_div-2">
                 <button class="header_mobile_btn"><img src="../../assets/img/Vector.svg" alt=""></button>
                 <div class="flex_row header_div_desktop">
-                    <button class="dropdown_btn-1">Login</button>
-                    <button class="dropdown_btn-2">Cadastro</button>
+                    <button id="redirectHomeBtn" class="dropdown_btn-1">Home</button>
+                    <button id="redirectRegisterBtnHeader" 
+                    class="dropdown_btn-2">Cadastro</button>  
                 </div>
             </div>
         </header>
@@ -36,16 +41,17 @@
             </div>
             <form class="login_form flex_col">
                 <label hidden for="email"></label>
-                <input class="input_login" placeholder="Seu e-mail" type="email" name="email">
+                <input id="email" class="input_login" placeholder="Seu e-mail" type="email" name="email">
                 <label hidden for="password"></label>
-                <input class="input_login" placeholder="Sua senha" type="password" name="password">
+                <input id="password" class="input_login" placeholder="Sua senha" type="password" name="password">
                 <button class="form_login_btn" type="submit">Login</button>
             </form>
             <div class="main_div-2 flex_col">
                 <span class="main_span">ou</span>
-                <button class="main_btn">Cadastre-se</button>
+                <button id="redirectRegisterBtn" class="main_btn">Cadastre-se</button>
             </div>
         </section>
     </main>
+    <script type="module" src="./index.js"></script>
 </body>
 </html>
