@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  :root {
+    --brand100: #4200FF;
+    --gray100: #000000;
+    --gray200: #212529;
+    --gray300: #343A40;
+    --gray400: #495057;
+    --gray500: #868E96;
+    --gray600: #ADB5BD;
+    --gray700: #E9ECEF;
+    --gray800: #F1F3F5;
+    --gray900: #F8F9FA;
+    --gray1000: #FCFEFF;
+    --gray1000: #FFFFFF;
+    --alert100: #CE4646;
+    --sucess100: #4BA036;
+
+    --font-size-1: 42px
+    --font-size-2: 40px;
+    --font-size-3: 30px;
+    --font-size-4: 22px;
+    --font-size-5: 20px;
+    --font-size-6: 18px;
+    --font-size-7: 17px;
+    --font-size-8: 16px;
+    
+    --font-weight-1: 700;
+    --font-weight-2: 400;
+  
+    --line-height-1: 48px;
+    --line-height-2: 36px;
+    --line-height-3: 27px;
+    --line-height-4: 24px;
+    --line-height-5: 22px;
+    --line-height-6: 150%;
+  
+    --radius-1:8px;
+    --radius-2:4px;
+  }
+  
+  .container{
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  
+
+  .hidden{
+    display: none;
+  }
