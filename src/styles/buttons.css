@@ -68,11 +68,48 @@
     min-width: 100%;
 }
 
-.modal_close-btn{
-    width: 38px;
-    height: 32px;
-    padding: 4px 14px;
-    color: var(--gray400);
+.modal_delete_confirm_button{
+    min-width: 100%;
+    background-color: var(--sucess100);
+}
+
+.modal_delete_close_btn{
+    position: absolute;
+    left: 600px;
+    top: 15px;
+    background-color: transparent;
     border: none;
     cursor: pointer;
+}
+
+.modal_big_close_btn{
+    position: absolute;
+    left: 810px;
+    top: 14px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal_big_hire_btn{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-6);
+    color: var(--gray1000);
+    border: none;
+    width: 157px;
+    height: 48px;
+    background-color: var(--sucess100);
+    cursor: pointer;
+}
+
+.modal_big_delete_btn{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-6);
+    color: var(--alert100);
+    border: 1px solid var(--alert100);
+    width: 157px;
+    height: 48px;
+    background-color: var(--gray1000);
+    cursor: pointer;
+    align-self: center;
 }
