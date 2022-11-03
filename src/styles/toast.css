@@ -41,6 +41,12 @@
     color: var(--gray1000);
 }
 
+.toast_message_success_userDashboard{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-5);
+    color: var(--gray1000);
+}
+
 .toast_message_error{
     font-weight: var(--font-weight-2);
     font-size: var(--font-size-5);

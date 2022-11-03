@@ -113,6 +113,76 @@ async function checkForAdmin(object){
     }
 }
 
+async function getUserInformation(){
+    try{
+        const localStorage = await getLocalData('user')
+        const data = await fetch (`${baseUrl}/users/profile`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const resp = data.json()
+        return resp
+    }catch(error){
+        console.log(error)
+    }
+}
+
+async function userEditProfile(body){
+    try{
+        const localStorage = await getLocalData('user')
+        const data = await fetch(`${baseUrl}/users`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            },
+            body: JSON.stringify(body)
+        })
+        if(data.ok == true){
+            createToast('Perfil atualizado com sucesso!', '')
+        }
+    }catch(error){
+        console.log(error)
+    }
+}
+
+async function getUserCoworkers(){
+    try{
+        const localStorage = await getLocalData('user')
+        const data = await fetch (`${baseUrl}/users/departments/coworkers`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const resp = data.json()
+        return resp
+    }catch(error){
+        console.log(error)
+    }
+}
+
+async function getUserDepartments(){
+    try{
+        const localStorage = await getLocalData('user')
+        const data = await fetch (`${baseUrl}/users/departments`, {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": `Bearer ${localStorage.token}`
+            }
+        })
+        const resp = data.json()
+        return resp
+    }catch(error){
+        console.log(error)
+    }
+}
+
 
 export {
     requestSectors,
@@ -120,4 +190,8 @@ export {
     requestCompaniesBySector,
     createNewUser,
     userLogin,
+    getUserInformation,
+    userEditProfile,
+    getUserCoworkers,
+    getUserDepartments,
 }
