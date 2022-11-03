@@ -72,6 +72,7 @@
     overflow-x: auto;
     gap: 100px;
     margin-bottom: 50px;
+    min-height: 250px;
     max-height: 320px;
 }
 
@@ -81,6 +82,7 @@
     background-color: var(--gray1000);
     padding: 15px 25px;
     margin-bottom: -60px;
+    height: fit-content;
 }
 
 .list_div-1{

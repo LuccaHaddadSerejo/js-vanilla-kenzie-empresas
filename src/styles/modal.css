@@ -5,11 +5,11 @@
     top: 0;
     left: 0;
     background-color: rgba(70, 35, 167, 0.13);
+    z-index: 1;
 }
 
 .modal_edit_container{
     position: relative;
-    height: 421px;
     width: 506px;
     padding: 30px;
     background-color: var(--gray1000);
@@ -27,4 +27,128 @@
 .modal_edit_form{
     gap: 20px;
 }
+
+.modal_delete_container{
+    position: relative;
+    width: 650px;
+    padding: 30px;
+    background-color: var(--gray1000);
+}
+
+.modal_delete_user_div-1{
+    justify-content: center;
+    align-items: center;
+    max-width: 550px;
+    gap: 30px;
+}
+
+.modal_delete_title{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-3);
+    line-height: 42px;
+    text-align: center;
+}
+
+.modal_big_container{
+    position: relative;
+    width: 857px;
+    height: 637px;
+    padding: 39px 43px;
+    background-color: var(--gray1000);
+}
+
+.modal_big_section-1{
+    margin-bottom: 51px;
+}
+
+.modal_big_section-1_div-1{
+    margin-bottom: 31px;
+}
+
+.modal_big_title{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-10);
+    color: var(--gray100);
+}
+
+.modal_big_section-1_div-2{
+    width: 100%;
+}
+
+.modal_big_section-1_div-2_div-1{
+    width: 50%;
+    position: relative;
+    top: 14px;
+    gap: 11px;
+}
+
+.modal_big_section-1_div-2_div-1_h3{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-5);
+    color: var(--gray100);
+}
+
+.modal_big_section-1_div-2_div-1_h4{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-6);
+    color: var(--gray100);
+}
+
+.modal_big_section-1_div-2_div-2{
+    width: 50%;
+    gap: 14px;
+}
+
+/* .modal_big_section-2{
+
+}
+
+.modal_big_section-2_div-1{
+
+} */
+
+.modal_big_ul{
+    width: 100%;
+    background-color: rgba(248, 248, 248, 1);
+    padding: 30px;
+    gap: 30px;
+    min-height: 300px;
+    overflow-x: scroll;
+}
+
+.modal_big_item{
+    list-style: none;
+    border-bottom: solid 1px var(--brand100);
+    width: 45%;
+    background-color: var(--gray1000);
+    padding: 15px 25px;
+    min-height: 230px;
+    min-width: 304px;
+}
+
+.modal_big_username{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-5);
+    color: var(--gray100);
+}
+
+.modal_big_job{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-6);
+    color: var(--gray100);
+}
+
+.modal_big_company{
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-6);
+    color: var(--gray100);
+}
+
+
+
+
+
+
+
+
 
