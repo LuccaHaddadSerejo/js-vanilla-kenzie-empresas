@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenzie empresas - UserDashboard</title>
+    <link rel="stylesheet" href="../../styles/toast.css">
     <link rel="stylesheet" href="../../styles/modal.css">
     <link rel="stylesheet" href="../../styles/inputs.css">
     <link rel="stylesheet" href="../../styles/displays.css">
@@ -20,11 +21,31 @@
                 <h2 class="header_title">Kenzie Empresas</h2>
             </div>
             <div class="header_div-2">
-                    <button class="dropdown_btn-1">Logout</button>
+                    <button id="logoutBtn" class="dropdown_btn-1">Logout</button>
             </div>
         </header>
     </div> 
     <main class="main container">
+        <section class="section-1 flex_row justify_between align_center"> 
+            <div class="section-1_div flex_col">
+                <h2 class="section-1_title">USERNAME</h2>
+                <div class="section-1_div-2 flex_row align_center justify_around">
+                    <span id="userEmail" class="section-1_span">Email: meuemail@mail.com</span>
+                    <span id="userJob" class="section-1_span">Pleno</span>
+                    <span id="userType" class="section-1_span">Home Office</span>
+                </div>
+            </div>
+            <div class="section-1_div-3"> 
+                <button id="edit" class="section-1_user_btn"><img class="img_pen" src="../../assets/img/penBlue.svg" alt=""></button>
+            </div>
+        </section>
+        <section class="section-2">
+        </section>
+    </main>   
+    <script type="module" src="./index.js"></script>    
+</body>
+
+
         <!-- <div class="modal_wrapper flex_row align_center justify_center">
             <div class="modal_edit_container flex_col">
                 <button class="modal_close_btn"><img src="../../assets/img/XBlack.svg" alt=""></button>
@@ -39,58 +60,3 @@
                 </div>
             </div>
         </div> -->
-        <section class="section-1 flex_row justify_between align_center"> 
-            <div class="section-1_div flex_col">
-                <h2 class="section-1_title">USERNAME</h2>
-                <div class="section-1_div-2 flex_row align_center justify_around">
-                    <span class="section-1_span">Email: meuemail@mail.com</span>
-                    <span class="section-1_span">Pleno</span>
-                    <span class="section-1_span">Home Office</span>
-                </div>
-            </div>
-            <div class="section-1_div-3"> 
-                <button class="section-1_user_btn"><img class="img_pen" src="../../assets/img/penBlue.svg" alt=""></button>
-            </div>
-        </section>
-        <section class="section-2">
-            <!-- <div class="empty_list flex_row align_center justify_center">
-                <span class="empty_list_span">Você ainda não foi contratado</span>
-            </div> -->
-            <div class="populated_list">
-                <div class="populated_list_div flex_row align_center justify_center">
-                    <h2 class="populated_list_title">Company Name - Department Name</h2>
-                </div>
-                <ul class="full_list flex_row flex_wrap justify_evenly">
-                    <li class="list_item flex_col">
-                        <span class="list_item_span-1">Nome do colega</span>
-                        <span class="list_item_span-2">Sênior</span>
-                    </li>
-                    <li class="list_item flex_col">
-                        <span class="list_item_span-1">Nome do colega</span>
-                        <span class="list_item_span-2">Sênior</span>
-                    </li>
-                    <li class="list_item flex_col">
-                        <span class="list_item_span-1">Nome do colega</span>
-                        <span class="list_item_span-2">Sênior</span>
-                    </li>
-                    <li class="list_item flex_col">
-                        <span class="list_item_span-1">Nome do colega</span>
-                        <span class="list_item_span-2">Sênior</span>
-                    </li>
-                    <li class="list_item flex_col">
-                        <span class="list_item_span-1">Nome do colega</span>
-                        <span class="list_item_span-2">Sênior</span>
-                    </li>
-                    <li class="list_item flex_col">
-                        <span class="list_item_span-1">Nome do colega</span>
-                        <span class="list_item_span-2">Sênior</span>
-                    </li>
-                    <li class="list_item flex_col">
-                        <span class="list_item_span-1">Nome do colega</span>
-                        <span class="list_item_span-2">Sênior</span>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </main>       
-</body>
