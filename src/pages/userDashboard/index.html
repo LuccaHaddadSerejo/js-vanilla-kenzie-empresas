@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie empresas - UserDashboard</title>
+    <link rel="stylesheet" href="../../styles/toast.css">
+    <link rel="stylesheet" href="../../styles/modal.css">
+    <link rel="stylesheet" href="../../styles/inputs.css">
+    <link rel="stylesheet" href="../../styles/displays.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="body">
+    <div class="border_full">
+        <header class="header container flex_row justify_between align_center">
+            <div class="header_div-1 flex_row align_center">
+                <div class="header_img"></div>
+                <h2 class="header_title">Kenzie Empresas</h2>
+            </div>
+            <div class="header_div-2">
+                    <button id="logoutBtn" class="dropdown_btn-1">Logout</button>
+            </div>
+        </header>
+    </div> 
+    <main id="mainUser" class="main container">
+        <section class="section-1 flex_row justify_between align_center"> 
+            <div class="section-1_div flex_col">
+                <h2 class="section-1_title">USERNAME</h2>
+                <div class="section-1_div-2 flex_row align_center justify_around">
+                    <span id="userEmail" class="section-1_span">Email: meuemail@mail.com</span>
+                    <span id="userJob" class="section-1_span">Pleno</span>
+                    <span id="userType" class="section-1_span">Home Office</span>
+                </div>
+            </div>
+            <div class="section-1_div-3"> 
+                <button id="edit" class="section-1_user_btn"><img class="img_pen" src="../../assets/img/penBlue.svg" alt=""></button>
+            </div>
+        </section>
+        <section id="sectionTwoUser" class="section-2">
+        </section>
+    </main>   
+    <script type="module" src="./index.js"></script>    
+</body>
+
+

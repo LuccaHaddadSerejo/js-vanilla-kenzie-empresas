@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie Empresas-Homepage</title>
+    <link rel="stylesheet" href="./src/styles/modal.css">
+    <link rel="stylesheet" href="./src/styles/buttons.css">
+    <link rel="stylesheet" href="./src/styles/inputs.css">
+    <link rel="stylesheet" href="./src/styles/displays.css">
+    <link rel="stylesheet" href="./src/styles/globalStyles.css">
+    <link rel="stylesheet" href="./src/pages/homepage/index.css">
+</head>
+<body class="body">
+    <div class="border_full">
+        <div class="hidden dropdown_full flex_row align_center justify_center">
+            <button id="dropDownRedirectLogin" class="dropdown_btn-1">Login</button>
+            <button id="dropDownRedirectRegister" class="dropdown_btn-2">Cadastro</button>
+        </div>
+        <header class="header container flex_row justify_between align_center">
+            <div class="header_div-1 flex_row align_center">
+                <div class="header_img"></div>
+                <h2 class="header_title">Kenzie Empresas</h2>
+            </div>
+            <div class="header_div-2">
+                <button class="header_mobile_btn"><img src="./src/assets/img/Vector.svg" alt=""></button>
+                <div class="flex_row header_div_desktop">
+                    <button id="redirectLogin" class="dropdown_btn-1">Login</button>
+                    <button id="redirectRegister" class="dropdown_btn-2">Cadastro</button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main class="main container">
+        <section class="section_one">
+            <div class="img_homepage_div">
+                <img class="homepage_img" src="./src/assets/img/homepagedesktop.svg" alt="">
+            </div>
+        </section>
+        <section class="section_two section_two_desktop">
+            <select id="select_home" class="select_full" name="">
+                <option hidden class="options" value="">Selecionar Setor</option>
+                <option class="options" value="">Selecionar todas</option>
+            </select>
+            <div class="div_ul">
+                <ul id="list_home" class="list_full flex_row">
+                </ul>
+            </div>
+        </section> 
+    </main>
+    <script type="module" src="./src/pages/homepage/index.js"></script>
+</body>
+</html>

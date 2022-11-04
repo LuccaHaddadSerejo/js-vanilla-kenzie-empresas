@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie empresas - AdminDashboard</title>
+    <link rel="stylesheet" href="../../styles/toast.css">
+    <link rel="stylesheet" href="../../styles/modal.css">
+    <link rel="stylesheet" href="../../styles/inputs.css">
+    <link rel="stylesheet" href="../../styles/displays.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="body">
+    <div class="border_full">
+        <header class="header container flex_row justify_between align_center">
+            <div class="header_div-1 flex_row align_center">
+                <div class="header_img"></div>
+                <h2 class="header_title">Kenzie Empresas</h2>
+            </div>
+            <div class="header_div-2">
+                <button id="logoutBtnAdm" class="dropdown_btn-1">Logout</button>
+            </div>
+        </header>
+    </div> 
+    <main id="mainADM" class="main container"> 
+        <section class="section-1 flex_col">
+            <div class="section-1_div-1 flex_row justify_between align_center">
+                <h2 class="section-1_div-1_title">Departamentos</h2>
+                <select id="select_adm" class="section-1_select">
+                    <option class="section-1_options" hidden value="">Selecionar Empresa</option>
+                    <option class="options" value="">Selecionar todas</option>
+                </select>
+                <img class="plus_img" src="../../assets/img/plusWhite.svg" alt="">
+                <button id="createDepBtn" class="dropdown_btn-2">Criar</button>
+            </div>
+            <ul id="departmentList" class="list_full flex_row flex_wrap justify_center">
+            </ul>
+        </section>
+        <section class="section-2">
+            <div class="section-2_div-1 flex_row justify_center">
+                <h2 class="section-2_div-1_title">Usuários cadastrados</h2>
+            </div>
+            <ul id="usersList" class="list_full flex_row flex_wrap justify_center">
+            </ul>
+        </section>
+    </main>
+    <script type="module" src="./index.js"></script>       
+</body>
+</html>

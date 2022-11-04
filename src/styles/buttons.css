@@ -1,0 +1,115 @@
+.header_mobile_btn{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown_btn-1{
+    width: 44.6%;
+    height: 48px;
+    background-color: var(--gray1000);
+    color: var(--brand100);
+    border: solid 1px var(--brand100);
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-6);
+    cursor: pointer;  
+}
+
+.dropdown_btn-2{
+    width: 44.6%;
+    height: 48px;
+    background-color: var(--brand100);
+    color: var(--gray1000);
+    border: none;
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-6);
+    cursor: pointer;
+}
+
+.main_btn{
+    width: 100%;
+    height: 48px;
+    background-color: var(--gray1000);
+    color: var(--brand100);
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-6);
+    border: 1px solid var(--brand100);
+    cursor: pointer;
+}
+
+.form_login_btn{
+    width: 100%;
+    height: 48px;
+    background-color: var(--brand100);
+    color: var(--gray1000);
+    font-weight: var(--font-weight-2);
+    font-size: var(--font-size-6);
+    border: none;
+    cursor: pointer;
+}
+
+.section-1_user_btn{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.modal_close_btn{
+    position: absolute;
+    left: 465px;
+    top: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.modal_edit_confirm_button{
+    min-width: 100%;
+}
+
+.modal_delete_confirm_button{
+    min-width: 100%;
+    background-color: var(--sucess100);
+}
+
+.modal_delete_close_btn{
+    position: absolute;
+    left: 600px;
+    top: 15px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal_big_close_btn{
+    position: absolute;
+    left: 810px;
+    top: 14px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.modal_big_hire_btn{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-6);
+    color: var(--gray1000);
+    border: none;
+    width: 157px;
+    height: 48px;
+    background-color: var(--sucess100);
+    cursor: pointer;
+}
+
+.modal_big_delete_btn{
+    font-weight: var(--font-weight-1);
+    font-size: var(--font-size-6);
+    color: var(--alert100);
+    border: 1px solid var(--alert100);
+    width: 157px;
+    height: 48px;
+    background-color: var(--gray1000);
+    cursor: pointer;
+    align-self: center;
+}

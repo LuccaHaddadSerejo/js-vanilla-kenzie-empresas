@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenzie empresas - Register</title>
+    <link rel="stylesheet" href="../../styles/toast.css">
+    <link rel="stylesheet" href="../../styles/inputs.css">
+    <link rel="stylesheet" href="../../styles/displays.css">
+    <link rel="stylesheet" href="../../styles/buttons.css">
+    <link rel="stylesheet" href="../../styles/globalStyles.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body class="body">
+    <div class="border_full">
+        <div class="hidden dropdown_full flex_row align_center justify_center">
+            <button id="dropDownRedirectHome" class="dropdown_btn-1">Home</button>
+            <button id="dropDownRedirectLogin" class="dropdown_btn-2">Login</button>
+        </div>
+        <header class="header container flex_row justify_between align_center">
+            <div class="header_div-1 flex_row align_center">
+                <div class="header_img"></div>
+                <h2 class="header_title">Kenzie Empresas</h2>
+            </div>
+            <div class="header_div-2">
+                <button class="header_mobile_btn"><img src="../../assets/img/Vector.svg" alt=""></button>
+                <div class="flex_row header_div_desktop">
+                    <button id="redirectHomeBtn"  class="dropdown_btn-1">Home</button>
+                    <button id="redirectLoginBtnHeader" class="dropdown_btn-2">Login</button>
+                </div>
+            </div>
+        </header>
+    </div>
+    <main class="main flex_col align_center">
+        <section class="section-1 flex_col">
+            <div class="main_div-1">
+                <h2 class="main_title">Cadastre-se</h2>
+            </div>
+            <form class="register_form flex_col">
+                <input class="input_login" placeholder="Seu nome" type="text" id="username">             
+                <input class="input_login" placeholder="Sua senha" type="password" id="password">
+                <input class="input_login" placeholder="Seu e-mail" type="email" id="email">
+                <select id="professional_level" class="form_select">
+                    <option hidden class="options" value="">Nível profissional</option>
+                    <option  class="options" value="estágio">Estágio</option>
+                    <option  class="options" value="júnior">Júnior</option>
+                    <option  class="options" value="pleno">Pleno</option>
+                    <option  class="options" value="sênior">Sênior</option>
+                </select>
+                <button class="form_login_btn" type="submit">Cadastre-se</button>
+            </form>
+            <div class="main_div-2">
+                <button id="redirectLoginBtn" class="main_btn">Retornar</button>
+            </div>
+        </section>
+    </main>
+    <script type="module" src="./index.js"></script>
+</body>
+</html>
