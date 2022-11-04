@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kenzie empresas - AdminDashboard</title>
+    <link rel="stylesheet" href="../../styles/toast.css">
     <link rel="stylesheet" href="../../styles/modal.css">
     <link rel="stylesheet" href="../../styles/inputs.css">
     <link rel="stylesheet" href="../../styles/displays.css">
@@ -20,190 +21,32 @@
                 <h2 class="header_title">Kenzie Empresas</h2>
             </div>
             <div class="header_div-2">
-                    <button class="dropdown_btn-1">Logout</button>
+                <button id="logoutBtnAdm" class="dropdown_btn-1">Logout</button>
             </div>
         </header>
     </div> 
-    <main class="main container"> 
+    <main id="mainADM" class="main container"> 
         <section class="section-1 flex_col">
             <div class="section-1_div-1 flex_row justify_between align_center">
                 <h2 class="section-1_div-1_title">Departamentos</h2>
-                <select class="section-1_select">
+                <select id="select_adm" class="section-1_select">
                     <option class="section-1_options" hidden value="">Selecionar Empresa</option>
-                    <option class="section-1_options" value="">Teste</option>
-                    <option class="section-1_options" value="">Teste</option>
-                    <option class="section-1_options" value="">Teste</option>
+                    <option class="options" value="">Selecionar todas</option>
                 </select>
                 <img class="plus_img" src="../../assets/img/plusWhite.svg" alt="">
-                <button class="dropdown_btn-2">Criar</button>
+                <button id="createDepBtn" class="dropdown_btn-2">Criar</button>
             </div>
-            <ul class="list_full flex_row flex_wrap justify_center">
-                <li class="list_item flex_col">
-                    <div class="list_div-1 flex_col">
-                        <h2 class="item_title">Department Name</h2>
-                        <span class="item_description">Department description</span>
-                        <span class="item_company">Company Name</span>
-                    </div>
-                    <div class="list_div-2 flex_row align_center justify_center">
-                        <button class="list_button"><img class="eye_img" src="../../assets/img/eyeBlue.svg" alt=""></button>
-                        <button class="list_button"><img class="pen_img" src="../../assets/img/penBlack.svg" alt=""></button>
-                        <button class="list_button"><img class="trash_img" src="../../assets/img/trashBlack.svg" alt=""></button>
-                    </div>
-                </li>
+            <ul id="departmentList" class="list_full flex_row flex_wrap justify_center">
             </ul>
         </section>
         <section class="section-2">
             <div class="section-2_div-1 flex_row justify_center">
                 <h2 class="section-2_div-1_title">Usuários cadastrados</h2>
             </div>
-            <ul class="list_full flex_row flex_wrap justify_center">
-                <li class="list_item flex_col justify_between">
-                    <div class="list_div-1 flex_col">
-                        <h2 class="item_title">Username</h2>
-                        <span class="item_description">Pleno</span>
-                        <span class="item_company">Company Name</span>
-                    </div>
-                    <div class="list_div-2 flex_row align_center justify_center">
-                        <button class="list_button"><img class="pen_img" src="../../assets/img/penBlack.svg" alt=""></button>
-                        <button class="list_button"><img class="trash_img" src="../../assets/img/trashBlack.svg" alt=""></button>
-                    </div>
-                </li>
+            <ul id="usersList" class="list_full flex_row flex_wrap justify_center">
             </ul>
         </section>
-    </main>       
+    </main>
+    <script type="module" src="./index.js"></script>       
 </body>
-
-
-  <!-- <div class="modal_wrapper flex_row align_center justify_center">
-    <div class="modal_edit_container flex_col">
-        <button class="modal_close_btn"><img src="../../assets/img/XBlack.svg" alt=""></button>
-        <div class="modal_edit_user_div-1 flex_col">
-            <h2 class="modal_edit_title">Editar Departamento</h2>
-            <form class="modal_edit_form flex_col">
-                <input class="input_login" placeholder="Nome do departamento" type="text">
-                <input class="input_login" placeholder="Descrição" type="email">
-                <select class="input_login">
-                    <option hidden value="">Selecionar empresa</option>
-                    <option value="">Teste</option>
-                    <option value="">Teste</option>
-                    <option value="">Teste</option>
-                </select>
-                <button class="dropdown_btn-2 modal_edit_confirm_button">Criar o departamento</button>
-            </form>
-        </div>
-    </div>
-</div> -->
-
-
-<!-- <div class="modal_wrapper flex_row align_center justify_center">
-    <div class="modal_edit_container flex_col">
-        <button class="modal_close_btn"><img src="../../assets/img/XBlack.svg" alt=""></button>
-        <div class="modal_edit_user_div-1 flex_col">
-            <h2 class="modal_edit_title">Editar departamento</h2>
-            <form class="modal_edit_form flex_col">
-            <textarea class="input_modal_textArea" name="" id="" cols="40" rows="10" placeholder="Descrição"></textarea>
-            <button class="dropdown_btn-2 modal_edit_confirm_button">Editar perfil</button>
-            </form>
-        </div>
-    </div>
-</div> -->
-
-<!-- <div class="modal_wrapper flex_row align_center justify_center">
-    <div class="modal_edit_container flex_col">
-        <button class="modal_close_btn"><img src="../../assets/img/XBlack.svg" alt=""></button>
-        <div class="modal_edit_user_div-1 flex_col">
-            <h2 class="modal_edit_title">Editar Usuário</h2>
-            <form class="modal_edit_form flex_col">
-                <select class="options_modal_select input_login">
-                    <option class="options_modal_select" hidden value="">Selecionar modalidade de trabalho</option>
-                    <option class="options_modal_select" value="">Teste</option>
-                    <option class="options_modal_select" value="">Teste</option>
-                    <option class="options_modal_select" value="">Teste</option>
-                </select>
-                <select class="options_modal_select input_login">
-                    <option options_modal_select hidden value="">Selecionar nível profissional</option>
-                    <option class="options_modal_select" value="">Teste</option>
-                    <option class="options_modal_select" value="">Teste</option>
-                    <option class="options_modal_select" value="">Teste</option>
-                </select>
-                <button class="dropdown_btn-2 modal_edit_confirm_button">Editar perfil</button>
-            </form>
-        </div>
-    </div>
-</div> -->
-
-<!-- <div class="modal_wrapper flex_row align_center justify_center">
-    <div class="modal_delete_container flex_col justify_center align_center">
-        <button class="modal_delete_close_btn"><img src="../../assets/img/XBlack.svg" alt=""></button>
-        <div class="modal_delete_user_div-1 flex_col">
-            <h2 class="modal_delete_title">Realmente deseja deletar o Departamento NOME e demitir seus funcionários?</h2>
-            <button class="dropdown_btn-2 modal_delete_confirm_button">Confirmar</button>
-        </div>
-    </div>
-</div> -->
-
-<!-- <div class="modal_wrapper flex_row align_center justify_center">
-    <div class="modal_delete_container flex_col justify_center align_center">
-        <button class="modal_delete_close_btn"><img src="../../assets/img/XBlack.svg" alt=""></button>
-        <div class="modal_delete_user_div-1 flex_col">
-            <h2 class="modal_delete_title">Realmente deseja remover o usuário NOME?</h2>
-            <button class="dropdown_btn-2 modal_delete_confirm_button">Deletar</button>
-        </div>
-    </div>
-</div> -->
-
-<!-- <div class="modal_wrapper flex_row align_center justify_center">     
-    <div class="modal_big_container">
-        <section class="modal_big_section-1">
-            <div class="modal_big_section-1_div-1">
-                <h2 class="modal_big_title">Nome do departamento</h2>
-                <button class="modal_big_close_btn"><img src="../../assets/img/XBlack.svg" alt=""></button>
-            </div>
-            <div class="modal_big_section-1_div-2 flex_row">
-                <div class="modal_big_section-1_div-2_div-1 flex_col">
-                    <h3 class="modal_big_section-1_div-2_div-1_h3">Descrição do departamento</h3>
-                    <h4 class="modal_big_section-1_div-2_div-1_h4">Empresa pertencente</h4>
-                </div>
-                <div class="modal_big_section-1_div-2_div-2 flex_col align_end">
-                    <select class="modal_big_select">
-                        <option hidden value="">Selecionar usuário</option>
-                        <option value="">Teste</option>
-                        <option value="">Teste</option>
-                        <option value="">Teste</option>
-                    </select>
-                    <button class="modal_big_hire_btn">Contratar</button>
-                </div>
-            </div>
-        </section>
-        <section  class="modal_big_section-2">
-            <div class="modal_big_section-2_div-1">
-                <ul class="modal_big_ul flex_row align_start">
-                    <li class="modal_big_item flex_col justify_around">
-                        <h3 class="modal_big_username">Username</h3>
-                        <span class="modal_big_job">Pleno</span>
-                        <span class="modal_big_company">Company Name</span>
-                        <button class="modal_big_delete_btn">Desligar</button>
-                    </li>
-                    <li class="modal_big_item flex_col justify_around">
-                        <h3 class="modal_big_username">Username</h3>
-                        <span class="modal_big_job">Pleno</span>
-                        <span class="modal_big_company">Company Name</span>
-                        <button class="modal_big_delete_btn">Desligar</button>
-                    </li>
-                    <li class="modal_big_item flex_col justify_around">
-                        <h3 class="modal_big_username">Username</h3>
-                        <span class="modal_big_job">Pleno</span>
-                        <span class="modal_big_company">Company Name</span>
-                        <button class="modal_big_delete_btn">Desligar</button>
-                    </li>
-                    <li class="modal_big_item flex_col justify_around">
-                        <h3 class="modal_big_username">Username</h3>
-                        <span class="modal_big_job">Pleno</span>
-                        <span class="modal_big_company">Company Name</span>
-                        <button class="modal_big_delete_btn">Desligar</button>
-                    </li>
-                </ul>
-            </div>
-        </section>
-    </div>
-</div> -->
+</html>
