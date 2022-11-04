@@ -9,7 +9,7 @@ function userEditProfileModal(){
     wrapper.classList = 'modal_wrapper flex_row align_center justify_center'
 
     const container = document.createElement('div')
-    container.classList = 'modal_edit_container flex_col'
+    container.classList = 'modal_edit_container flex_col animation_popup'
 
     const closeBtn = document.createElement('button')
     closeBtn.classList = 'modal_close_btn'
@@ -36,11 +36,13 @@ function userEditProfileModal(){
     inputEmail.classList = 'input_login'
     inputEmail.placeholder = 'Seu e-mail'
     inputEmail.id = 'email'
+    inputEmail.type = 'email'
 
     const inputPassword = document.createElement('input')
     inputPassword.classList = 'input_login' 
     inputPassword.placeholder = 'Sua senha'
     inputPassword.id = 'password'
+    inputPassword.type = 'password'
     
     const buttonConfirm = document.createElement('button')
     buttonConfirm.classList = 'dropdown_btn-2 modal_edit_confirm_button'
@@ -60,9 +62,12 @@ function userEditProfileModal(){
         getUserData()
         wrapper.remove()
     })
-
+    
     closeBtn.addEventListener('click', ()=>{
-        wrapper.remove()
+        container.classList.add('animation_closeModal')
+        setTimeout(() => {  
+            wrapper.remove()  
+        }, 300);      
     })
 
     closeBtn.append(BtnImg)
