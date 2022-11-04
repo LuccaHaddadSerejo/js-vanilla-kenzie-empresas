@@ -2,13 +2,13 @@ import { getUserData } from "../pages/userDashboard/index.js"
 import { userEditProfile } from "./request.js"
 
 function userEditProfileModal(){
-    const section = document.querySelector('.section-2')
-    const main = document.querySelector('.main')
+    const section = document.getElementById('sectionTwoUser')
+    const main = document.getElementById('mainUser')
 
     const wrapper = document.createElement('div')
     wrapper.classList = 'modal_wrapper flex_row align_center justify_center'
 
-    const container = document.createElement('container')
+    const container = document.createElement('div')
     container.classList = 'modal_edit_container flex_col'
 
     const closeBtn = document.createElement('button')
@@ -25,7 +25,7 @@ function userEditProfileModal(){
     title.innerText = 'Edital perfil'
 
     const form = document.createElement('form')
-    form.classList =  'modal_edit_form'
+    form.classList =  'modal_edit_form flex_col'
 
     const inputName = document.createElement('input')
     inputName.classList = 'input_login'

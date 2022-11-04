@@ -9,6 +9,8 @@ function verifyPermission(){
     }
 }
 
+verifyPermission()
+
 function logOut(){
     const btn = document.getElementById('logoutBtn')
     btn.addEventListener('click', () =>{
@@ -17,10 +19,13 @@ function logOut(){
     })
 }
 
+logOut()
+
 async function getUserData(){
-    let user = await getUserInformation()
-    let coworkers = await getUserCoworkers()
-    let departments = await getUserDepartments()
+    const user = await getUserInformation()
+    const coworkers = await getUserCoworkers()
+    const coworkersList = coworkers[0].users
+    const departments = await getUserDepartments()
     const section = document.querySelector('.section-2')
     const name = document.querySelector('.section-1_title')
     const email = document.querySelector('#userEmail')
@@ -54,7 +59,7 @@ async function getUserData(){
         const completeList = document.createElement('ul')
         completeList.classList = 'full_list flex_row flex_wrap justify_evenly'
 
-        coworkers.forEach(elt =>{
+        coworkersList.forEach(elt =>{
             const item = document.createElement('li')
             item.classList = 'list_item flex_col'
 
@@ -63,14 +68,8 @@ async function getUserData(){
 
             const itemJob = document.createElement('span')
             itemJob.classList = 'list_item_span-2'
-            const name = elt.users
-            name.map(elt => {
-                itemName.innerText = elt.username
-                itemJob.innerText = elt.professional_level
-            })
-            
-            
-
+            itemName.innerText = elt.username
+            itemJob.innerText = elt.professional_level
             item.append(itemName, itemJob)
             completeList.append(item)
         })
@@ -81,18 +80,20 @@ async function getUserData(){
     }
 }
 
+getUserData()
+
 function editProfile(){
     const btn = document.getElementById('edit')
-
+    console.log(btn)
     btn.addEventListener('click', ()=>{
         userEditProfileModal()
     })
 }
 
 editProfile()
-getUserData()
-logOut()
-verifyPermission()
+
+
+
 
 export{
     getUserData

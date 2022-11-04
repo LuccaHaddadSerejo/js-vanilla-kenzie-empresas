@@ -17,16 +17,14 @@ const createToast = (title, text) => {
     if(title == 'O email já foi registrado!'){
         toastTitle.classList = 'toast_message_error'
         toastWrapper.classList = 'toast_wrapper background_error animation-1'
-    }else if(title == 'Sua conta foi criada com sucesso!'){
-        toastTitle.classList = 'toast_message_success'
-        toastWrapper.classList = 'toast_wrapper background_sucess animation-1'
     }else if(title == 'Usuário ou senha incorretos!'){
         toastTitle.classList = 'toast_message_error'
         toastWrapper.classList = 'toast_wrapper background_error animation-1'
-    }else if(title == 'Perfil atualizado com sucesso!'){
-        toastTitle.classList = 'toast_message_success_userDashboard'
+    }else{
+        toastTitle.classList = 'toast_message_success'
         toastWrapper.classList = 'toast_wrapper background_sucess animation-1'
     }
+
 
     toastDivTwo.append(toastTitle)
     toastDiv.append(toastDivTwo)
