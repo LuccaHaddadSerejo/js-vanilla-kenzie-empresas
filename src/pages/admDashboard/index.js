@@ -572,7 +572,6 @@ async function renderAllUsers(){
                 event.preventDefault()
                 listUsers.innerHTML = ''
                 const elements = [...form.elements]
-                console.log(elements)
                 const body = {}
                 elements.forEach(elt =>{
                     if(elt.id == "jobType"){

@@ -123,7 +123,7 @@ async function getUserInformation(){
                 "Authorization": `Bearer ${localStorage.token}`
             }
         })
-        const resp = data.json()
+        const resp = await data.json()
         return resp
     }catch(error){
         console.log(error)
@@ -159,7 +159,7 @@ async function getUserCoworkers(){
                 "Authorization": `Bearer ${localStorage.token}`
             }
         })
-        const resp = data.json()
+        const resp = await data.json()
         return resp
     }catch(error){
         console.log(error)
@@ -176,7 +176,7 @@ async function getUserDepartments(){
                 "Authorization": `Bearer ${localStorage.token}`
             }
         })
-        const resp = data.json()
+        const resp = await data.json()
         return resp
     }catch(error){
         console.log(error)
@@ -193,7 +193,7 @@ async function getAllDepartments(){
                 "Authorization": `Bearer ${localStorage.token}`
             }
         })
-        const resp = data.json()
+        const resp = await data.json()
         return resp
     }catch(error){
         console.log(error)
@@ -210,7 +210,7 @@ async function getAllUsers(){
                 "Authorization": `Bearer ${localStorage.token}`
             }
         })
-        const resp = data.json()
+        const resp = await data.json()
         return resp
     }catch(error){
         console.log(error)
@@ -227,7 +227,7 @@ async function getDepartmentByCompany(id){
                 "Authorization": `Bearer ${localStorage.token}`
             }
         })
-        const resp = data.json()
+        const resp = await data.json()
         return resp
     }catch(error){
         console.log(error)
@@ -338,7 +338,7 @@ async function getUsersWithoutDepartment(){
                 "Authorization": `Bearer ${localStorage.token}`
             }
         })
-        const resp = data.json()
+        const resp = await data.json()
         return resp
     }catch(error){
         console.log(error)
