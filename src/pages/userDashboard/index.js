@@ -23,9 +23,6 @@ logOut()
 
 async function getUserData(){
     const user = await getUserInformation()
-    const coworkers = await getUserCoworkers()
-    const coworkersList = coworkers[0].users
-    const departments = await getUserDepartments()
     const section = document.querySelector('.section-2')
     const name = document.querySelector('.section-1_title')
     const email = document.querySelector('#userEmail')
@@ -37,7 +34,7 @@ async function getUserData(){
     job.innerText = user.professional_level
     type.innerText = user.kind_of_work
 
-    if(departments.error){
+    if(user.department_uuid == null){
         const empty = document.createElement('div')
         empty.classList = 'empty_list flex_row align_center justify_center'
         const message = document.createElement('span')
@@ -46,6 +43,8 @@ async function getUserData(){
         empty.append(message)
         section.append(empty)
     }else{
+        const coworkers = await getUserCoworkers()
+        const depart = await getUserDepartments()
         const populated = document.createElement('div')
         populated.classList = 'populated_list'
 
@@ -54,24 +53,26 @@ async function getUserData(){
         
         const populatedTitle = document.createElement('h2')
         populatedTitle.classList = 'populated_list_title'
-        populatedTitle.innerText = `${departments.name} - ${coworkers[0].name}` 
-
+        populatedTitle.innerText = `${depart.name} - ${depart.departments[0].name}`
         const completeList = document.createElement('ul')
         completeList.classList = 'full_list flex_row flex_wrap justify_evenly'
 
-        coworkersList.forEach(elt =>{
-            const item = document.createElement('li')
-            item.classList = 'list_item flex_col'
-
-            const itemName = document.createElement('span')
-            itemName.classList = 'list_item_span-1'
-
-            const itemJob = document.createElement('span')
-            itemJob.classList = 'list_item_span-2'
-            itemName.innerText = elt.username
-            itemJob.innerText = elt.professional_level
-            item.append(itemName, itemJob)
-            completeList.append(item)
+        coworkers.forEach(elt =>{
+            const coUsers = elt.users
+            coUsers.forEach(users => {
+                const item = document.createElement('li')
+                item.classList = 'list_item flex_col'
+    
+                const itemName = document.createElement('span')
+                itemName.classList = 'list_item_span-1'
+    
+                const itemJob = document.createElement('span')
+                itemJob.classList = 'list_item_span-2'
+                itemName.innerText = users.username
+                itemJob.innerText = users.professional_level
+                item.append(itemName, itemJob)
+                completeList.append(item)
+            })    
         })
 
         populatedDivOne.append(populatedTitle)
@@ -84,7 +85,6 @@ getUserData()
 
 function editProfile(){
     const btn = document.getElementById('edit')
-    console.log(btn)
     btn.addEventListener('click', ()=>{
         userEditProfileModal()
     })
