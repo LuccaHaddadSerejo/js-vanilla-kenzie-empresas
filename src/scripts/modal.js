@@ -60,14 +60,17 @@ function userEditProfileModal(){
         })
         await userEditProfile(body)
         getUserData()
-        wrapper.remove()
+        wrapper.classList.add('animation_closeModal')
+        setTimeout(() => {      
+            wrapper.remove()
+        }, 400);  
     })
     
     closeBtn.addEventListener('click', ()=>{
-        container.classList.add('animation_closeModal')
-        setTimeout(() => {  
-            wrapper.remove()  
-        }, 300);      
+        wrapper.classList.add('animation_closeModal')
+        setTimeout(() => {      
+            wrapper.remove()
+        }, 400);  
     })
 
     closeBtn.append(BtnImg)
