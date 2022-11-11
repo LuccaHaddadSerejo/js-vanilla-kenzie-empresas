@@ -157,7 +157,7 @@
 }
 
 .animation_popup{
-    animation: animationModal 400ms ease forwards
+    animation: animationModal 450ms ease forwards
 }
 
 @keyframes animationModalClose{
@@ -172,7 +172,7 @@
 }
 
 .animation_closeModal{
-    animation: animationModalClose 400ms ease forwards
+    animation: animationModalClose 450ms ease forwards
 }
 
 
