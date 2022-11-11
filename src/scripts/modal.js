@@ -36,11 +36,13 @@ function userEditProfileModal(){
     inputEmail.classList = 'input_login'
     inputEmail.placeholder = 'Seu e-mail'
     inputEmail.id = 'email'
+    inputEmail.type = 'email'
 
     const inputPassword = document.createElement('input')
     inputPassword.classList = 'input_login' 
     inputPassword.placeholder = 'Sua senha'
     inputPassword.id = 'password'
+    inputPassword.type = 'password'
     
     const buttonConfirm = document.createElement('button')
     buttonConfirm.classList = 'dropdown_btn-2 modal_edit_confirm_button'
@@ -63,7 +65,7 @@ function userEditProfileModal(){
             wrapper.remove()
         }, 400);  
     })
-
+    
     closeBtn.addEventListener('click', ()=>{
         wrapper.classList.add('animation_closeModal')
         setTimeout(() => {      

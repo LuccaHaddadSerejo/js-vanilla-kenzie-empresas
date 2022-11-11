@@ -20,9 +20,6 @@
     background-color: var(--alert100);
 }
 
-.animation-1{
-    animation: toastAnimationOne 5000ms ease-in forwards;
-}
 
 .toast_div{
     display: flex;
