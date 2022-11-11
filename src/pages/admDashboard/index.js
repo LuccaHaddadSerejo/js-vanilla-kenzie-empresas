@@ -36,13 +36,18 @@ async function selectCompany(){
 
 selectCompany()
 
-function selectFilter(){
-    const select = document.getElementById('select_adm')
+async function selectFilter(){
+    const select = await selectCompany()
     const listDepartments = document.getElementById('departmentList')
     select.addEventListener('change', (event)=>{
         event.preventDefault()
         listDepartments.innerHTML = ''
-        getApiData(getDepartmentByCompany(event.target.value))
+        if (event.target.value != 'todos'){
+            getApiData(getDepartmentByCompany(event.target.value))
+        }else{
+            getApiData(getAllDepartments())
+        }
+       
     });
 }
 
@@ -102,7 +107,7 @@ function newDepartment(){
         wrapper.classList = 'modal_wrapper flex_row align_center justify_center'
     
         const container = document.createElement('div')
-        container.classList = 'modal_edit_container flex_col'
+        container.classList = 'modal_edit_container flex_col animation_popup'
     
         const closeBtn = document.createElement('button')
         closeBtn.classList = 'modal_close_btn'
@@ -146,8 +151,9 @@ function newDepartment(){
         buttonConfirm.classList = 'dropdown_btn-2 modal_edit_confirm_button'
         buttonConfirm.innerText = 'Criar o departamento'
     
-        form.addEventListener('submit', async (event)=>{
+        form.addEventListener('submit', async (event)=>{      
             event.preventDefault()
+            const selectMain = await selectCompany()
             list.innerHTML = ''
             const elements = [...form.elements]
             const body = {}
@@ -159,12 +165,24 @@ function newDepartment(){
                 }
             })
             await createDepartment(body)
-            getApiData(getAllDepartments())
-            wrapper.remove()
-        })
-    
+            console.log(select)
+            if(select.value == selectMain.value){
+                getApiData(getDepartmentByCompany(select.value))
+            }else if (selectMain.value == 'todos'){
+                getApiData(getAllDepartments())
+            }else{
+        
+            }
+            wrapper.classList.add('animation_closeModal')
+            setTimeout(() => {      
+                wrapper.remove()
+            }, 400);  
+            })   
         closeBtn.addEventListener('click', ()=>{
-            wrapper.remove()
+            wrapper.classList.add('animation_closeModal')
+            setTimeout(() => {      
+                wrapper.remove()
+            }, 400);  
         })
     
         closeBtn.append(BtnImg)
@@ -213,7 +231,7 @@ function renderAllDepartments(arr){
             wrapper.classList = 'modal_wrapper flex_row align_center justify_center'
 
             const container = document.createElement('div')
-            container.classList = 'modal_big_container'
+            container.classList = 'modal_big_container animation_popup'
 
             const sectionOne = document.createElement('section')
             sectionOne.classList = 'modal_big_section-1'
@@ -294,7 +312,10 @@ function renderAllDepartments(arr){
             renderModalList(sectionTwoList, elt)
 
             closeBtn.addEventListener('click', ()=> {
-                wrapper.remove()
+                wrapper.classList.add('animation_closeModal')
+                setTimeout(() => {      
+                    wrapper.remove()
+                }, 400);  
             })
 
             closeBtn.append(closeBtnImg)
@@ -321,7 +342,7 @@ function renderAllDepartments(arr){
             wrapper.classList = 'modal_wrapper flex_row align_center justify_center'
         
             const container = document.createElement('div')
-            container.classList = 'modal_edit_container flex_col'
+            container.classList = 'modal_edit_container flex_col animation_popup'
         
             const closeBtn = document.createElement('button')
             closeBtn.classList = 'modal_close_btn'
@@ -360,11 +381,17 @@ function renderAllDepartments(arr){
                 })
                 await editDepartment(body, elt.uuid)
                 getApiData(getAllDepartments())
-                wrapper.remove()
+                wrapper.classList.add('animation_closeModal')
+                setTimeout(() => {      
+                    wrapper.remove()
+                }, 400);  
             })
         
             closeBtn.addEventListener('click', ()=>{
-                wrapper.remove()
+                wrapper.classList.add('animation_closeModal')
+                setTimeout(() => {      
+                    wrapper.remove()
+                }, 400);  
             })
         
             closeBtn.append(BtnImg)
@@ -385,7 +412,7 @@ function renderAllDepartments(arr){
             wrapper.classList = 'modal_wrapper flex_row align_center justify_center'
         
             const container = document.createElement('div')
-            container.classList = 'modal_delete_container flex_col justify_center align_center'
+            container.classList = 'modal_delete_container flex_col justify_center align_center animation_popup'
         
             const closeBtn = document.createElement('button')
             closeBtn.classList = 'modal_delete_close_btn'
@@ -411,11 +438,17 @@ function renderAllDepartments(arr){
                 await deleteDepartment(elt.uuid)
                 getApiData(getAllDepartments())
                 renderAllUsers()
-                wrapper.remove()
+                wrapper.classList.add('animation_closeModal')
+                setTimeout(() => {      
+                    wrapper.remove()
+                }, 400);  
             })
 
             closeBtn.addEventListener('click', ()=>{
-                wrapper.remove()
+                wrapper.classList.add('animation_closeModal')
+                setTimeout(() => {      
+                    wrapper.remove()
+                }, 400);  
             })
         
             closeBtn.append(BtnImg)
@@ -493,7 +526,7 @@ async function renderAllUsers(){
             wrapper.classList = 'modal_wrapper flex_row align_center justify_center'
 
             const container = document.createElement('div')
-            container.classList = 'modal_edit_container flex_col'
+            container.classList = 'modal_edit_container flex_col animation_popup'
 
             const closeBtn = document.createElement('button')
             closeBtn.classList = 'modal_close_btn'
@@ -582,11 +615,17 @@ async function renderAllUsers(){
                 })
                 await editUser(body, user.uuid)
                 renderAllUsers()
-                wrapper.remove()
+                wrapper.classList.add('animation_closeModal')
+                setTimeout(() => {      
+                    wrapper.remove()
+                }, 400);  
             })
         
             closeBtn.addEventListener('click', ()=>{
-                wrapper.remove()
+                wrapper.classList.add('animation_closeModal')
+                setTimeout(() => {      
+                    wrapper.remove()
+                }, 400);  
             })
         
             closeBtn.append(BtnImg)
@@ -610,7 +649,7 @@ async function renderAllUsers(){
             wrapper.classList = 'modal_wrapper flex_row align_center justify_center'
         
             const container = document.createElement('div')
-            container.classList = 'modal_delete_container flex_col justify_center align_center'
+            container.classList = 'modal_delete_container flex_col justify_center align_center animation_popup'
         
             const closeBtn = document.createElement('button')
             closeBtn.classList = 'modal_delete_close_btn'
@@ -634,11 +673,17 @@ async function renderAllUsers(){
                 listUsers.innerHTML = ''
                 await deleteUser(user.uuid)
                 renderAllUsers()
-                wrapper.remove()
+                wrapper.classList.add('animation_closeModal')
+                setTimeout(() => {      
+                    wrapper.remove()
+                }, 400);  
             })
 
             closeBtn.addEventListener('click', ()=>{
-                wrapper.remove()
+                wrapper.classList.add('animation_closeModal')
+                setTimeout(() => {      
+                    wrapper.remove()
+                }, 400);  
             })
         
             closeBtn.append(BtnImg)

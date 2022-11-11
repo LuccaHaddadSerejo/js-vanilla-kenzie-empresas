@@ -145,6 +145,37 @@
     color: var(--gray100);
 }
 
+@keyframes animationModal{
+    0% {
+        transform: translateY(20px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+.animation_popup{
+    animation: animationModal 400ms ease forwards
+}
+
+@keyframes animationModalClose{
+    0% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0%;
+    }
+}
+
+.animation_closeModal{
+    animation: animationModalClose 400ms ease forwards
+}
+
+
 
 
 

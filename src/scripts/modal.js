@@ -9,7 +9,7 @@ function userEditProfileModal(){
     wrapper.classList = 'modal_wrapper flex_row align_center justify_center'
 
     const container = document.createElement('div')
-    container.classList = 'modal_edit_container flex_col'
+    container.classList = 'modal_edit_container flex_col animation_popup'
 
     const closeBtn = document.createElement('button')
     closeBtn.classList = 'modal_close_btn'
@@ -58,11 +58,17 @@ function userEditProfileModal(){
         })
         await userEditProfile(body)
         getUserData()
-        wrapper.remove()
+        wrapper.classList.add('animation_closeModal')
+        setTimeout(() => {      
+            wrapper.remove()
+        }, 400);  
     })
 
     closeBtn.addEventListener('click', ()=>{
-        wrapper.remove()
+        wrapper.classList.add('animation_closeModal')
+        setTimeout(() => {      
+            wrapper.remove()
+        }, 400);  
     })
 
     closeBtn.append(BtnImg)
