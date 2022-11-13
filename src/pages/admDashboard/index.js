@@ -165,7 +165,6 @@ function newDepartment(){
                 }
             })
             await createDepartment(body)
-            console.log(select)
             if(select.value == selectMain.value){
                 getApiData(getDepartmentByCompany(select.value))
             }else if (selectMain.value == 'todos'){
@@ -435,10 +434,16 @@ function renderAllDepartments(arr){
             buttonConfirm.addEventListener('click', async()=>{
                 list.innerHTML = ''
                 listUsers.innerHTML = ''
-                await deleteDepartment(elt.uuid)
-                getApiData(getAllDepartments())
-                renderAllUsers()
+                const selectMain = await selectCompany()
                 wrapper.classList.add('animation_closeModal')
+                if(elt.companies.name == selectMain.value){
+                    getApiData(getDepartmentByCompany(selectMain.value))
+                }else if (selectMain.value == 'todos'){
+                    getApiData(getAllDepartments())
+                }else{
+                }
+                deleteDepartment(elt.uuid)
+                renderAllUsers()
                 setTimeout(() => {      
                     wrapper.remove()
                 }, 400);  
