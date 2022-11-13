@@ -165,10 +165,9 @@ function newDepartment(){
                 }
             })
             await createDepartment(body)
-            console.log(select)
             if(select.value == selectMain.value){
                 getApiData(getDepartmentByCompany(select.value))
-            }else if (selectMain.value == 'todos'){
+            }else if (selectMain.value == 'todos' || selectMain.value == 'default'){
                 getApiData(getAllDepartments())
             }else{
         
@@ -372,6 +371,8 @@ function renderAllDepartments(arr){
             form.addEventListener('submit', async (event)=>{
                 event.preventDefault()
                 list.innerHTML = ''
+                wrapper.classList.add('animation_closeModal')
+                const selectMain = await selectCompany()
                 const elements = [...form.elements]
                 const body = {}
                 elements.forEach(elt =>{
@@ -380,8 +381,12 @@ function renderAllDepartments(arr){
                     }
                 })
                 await editDepartment(body, elt.uuid)
-                getApiData(getAllDepartments())
-                wrapper.classList.add('animation_closeModal')
+                if(elt.companies.uuid == selectMain.value){
+                    getApiData(getDepartmentByCompany(selectMain.value))
+                }else if (selectMain.value == 'todos' || selectMain.value == 'default'){
+                    getApiData(getAllDepartments())
+                }else{
+                }       
                 setTimeout(() => {      
                     wrapper.remove()
                 }, 400);  
@@ -435,10 +440,16 @@ function renderAllDepartments(arr){
             buttonConfirm.addEventListener('click', async()=>{
                 list.innerHTML = ''
                 listUsers.innerHTML = ''
-                await deleteDepartment(elt.uuid)
-                getApiData(getAllDepartments())
-                renderAllUsers()
+                const selectMain = await selectCompany()
                 wrapper.classList.add('animation_closeModal')
+                await deleteDepartment(elt.uuid)
+                if(elt.companies.uuid == selectMain.value){
+                    getApiData(getDepartmentByCompany(selectMain.value))
+                }else if (selectMain.value == 'todos' || selectMain.value == 'default'){
+                    getApiData(getAllDepartments())
+                }else{
+                }      
+                renderAllUsers()
                 setTimeout(() => {      
                     wrapper.remove()
                 }, 400);  
